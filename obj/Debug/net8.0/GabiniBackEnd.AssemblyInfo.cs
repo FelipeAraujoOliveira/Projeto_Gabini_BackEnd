@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GabiniBackEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4c8f692981c114d05e65faece66f5e0ec706215")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57971d4d9f72c0debe47979e196df6ba39f86429")]
 [assembly: System.Reflection.AssemblyProductAttribute("GabiniBackEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GabiniBackEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

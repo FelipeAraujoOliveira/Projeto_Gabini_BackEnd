@@ -15,7 +15,7 @@ namespace ProjetoCarrinhoProdutos
 
                 await context.Database.MigrateAsync();
 
-                if (!context.Usuarios.Any())
+                if ( await context.Usuarios.AnyAsync() == false)
                 {
                     var usuario1 = new Usuario
                     {
@@ -72,7 +72,7 @@ namespace ProjetoCarrinhoProdutos
                     await context.SaveChangesAsync();
                 }
 
-                if (!context.Produtos.Any())
+                if (await context.Produtos.AnyAsync() == false)
                 {
                     var produto1 = new Produto { Id = "1", Nome = "Produto1", Preco = 10.0f, Quantidade = 100, Image_url = "url_to_image1" };
                     var produto2 = new Produto { Id = "2", Nome = "Produto2", Preco = 20.0f, Quantidade = 200, Image_url = "url_to_image2" };

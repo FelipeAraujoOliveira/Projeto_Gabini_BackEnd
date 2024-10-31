@@ -84,7 +84,7 @@ namespace ProjetoCarrinhoProdutos
 
             app.MapControllers();
 
-            app.Run();
+            await app.RunAsync();
         }
     }
 }

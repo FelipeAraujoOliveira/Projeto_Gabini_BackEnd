@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers",
-    "\\Migrations",
-    "\\Models"
+    "\\Controllers"
   ],
-  "SelectedNode": "\\appsettings.Development.json",
+  "SelectedNode": "\\Controllers\\CarrinhoController.cs",
   "PreviewInSolutionExplorer": false
 }
