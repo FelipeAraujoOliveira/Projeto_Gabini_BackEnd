@@ -2,7 +2,7 @@
 {
     public class Usuario
     {
-        public string Id { get; set; }
+        public required string Id { get; set; }
         public string NomeCompleto { get; set; } // fullName
         public string Email { get; set; }
         public string Telefone { get; set; } // phone

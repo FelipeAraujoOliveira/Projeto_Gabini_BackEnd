@@ -6,7 +6,7 @@ namespace ProjetoCarrinhoProdutos.Models
     public class Carrinho
     {
         public required string Id { get; set; }
-        public string UsuarioId { get; set; }
+        public required string UsuarioId { get; set; }
         public List<Produto> Produtos { get; set; }
         public required DateTime DataCompra { get; set; }
         public required float PrecoTotal { get; set; }

@@ -1550,6 +1550,15 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "OneOf/3.0.271": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/OneOf.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/OneOf.dll": {}
+        }
+      },
       "Pomelo.EntityFrameworkCore.MySql/8.0.2": {
         "type": "package",
         "dependencies": {
@@ -5861,6 +5870,21 @@
         "netstandard.library.nuspec"
       ]
     },
+    "OneOf/3.0.271": {
+      "sha512": "pqpqeK8xQGggExhr4tesVgJkjdn+9HQAO0QgrYV2hFjE3y90okzk1kQMntMiUOGfV7FrCUfKPaVvPBD4IANqKg==",
+      "type": "package",
+      "path": "oneof/3.0.271",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/OneOf.dll",
+        "lib/net45/OneOf.dll",
+        "lib/netstandard1.3/OneOf.dll",
+        "lib/netstandard2.0/OneOf.dll",
+        "oneof.3.0.271.nupkg.sha512",
+        "oneof.nuspec"
+      ]
+    },
     "Pomelo.EntityFrameworkCore.MySql/8.0.2": {
       "sha512": "XjnlcxVBLnEMbyEc5cZzgZeDyLvAniACZQ04W1slWN0f4rmfNzl98gEMvHnFH0fMDF06z9MmgGi/Sr7hJ+BVnw==",
       "type": "package",
@@ -10118,6 +10142,7 @@
       "Microsoft.AspNetCore.Mvc.Testing >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Moq >= 4.20.72",
+      "OneOf >= 3.0.271",
       "coverlet.msbuild >= 6.0.2",
       "microsoft.entityframeworkcore.tools >= 8.0.10",
       "pomelo.entityframeworkcore.mysql >= 8.0.2",
@@ -10189,6 +10214,10 @@
           "Moq": {
             "target": "Package",
             "version": "[4.20.72, )"
+          },
+          "OneOf": {
+            "target": "Package",
+            "version": "[3.0.271, )"
           },
           "coverlet.msbuild": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

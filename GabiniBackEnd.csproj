@@ -20,6 +20,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="OneOf" Version="3.0.271" />
     <PackageReference Include="pomelo.entityframeworkcore.mysql" Version="8.0.2" />
     <PackageReference Include="pomelo.entityframeworkcore.mysql.design" Version="1.1.2" />
     <PackageReference Include="swashbuckle.aspnetcore" Version="6.8.1" />

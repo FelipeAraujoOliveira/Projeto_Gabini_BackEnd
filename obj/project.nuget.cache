@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IU5KkbmHcEU=",
+  "dgSpecHash": "SqYKeTm34Qg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\GabiniBackEnd.csproj",
   "expectedPackageFiles": [
@@ -78,6 +78,7 @@
     "C:\\Users\\Felipe\\.nuget\\packages\\moq\\4.20.72\\moq.4.20.72.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\Felipe\\.nuget\\packages\\oneof\\3.0.271\\oneof.3.0.271.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\8.0.2\\pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\pomelo.entityframeworkcore.mysql.design\\1.1.2\\pomelo.entityframeworkcore.mysql.design.1.1.2.nupkg.sha512",
     "C:\\Users\\Felipe\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
