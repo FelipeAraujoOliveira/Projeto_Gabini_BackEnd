@@ -5,11 +5,11 @@ namespace ProjetoCarrinhoProdutos.Models
 {
     public class Carrinho
     {
-        public string Id { get; set; }
+        public required string Id { get; set; }
         public string UsuarioId { get; set; }
         public List<Produto> Produtos { get; set; }
-        public DateTime DataCompra { get; set; }
-        public float PrecoTotal { get; set; }
+        public required DateTime DataCompra { get; set; }
+        public required float PrecoTotal { get; set; }
 
         public Carrinho()
         {

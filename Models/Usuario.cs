@@ -13,8 +13,8 @@
         public string Cep { get; set; } // zip
         public string Senha { get; set; } // password
         public string DataNascimento { get; set; } // birthDate
-        public string Cpf { get; set; } 
-        public bool Ativo {  get; set; }
+        public string Cpf { get; set; }
+        public required bool Ativo {  get; set; }
         public string Url_foto_perfil { get; set; }
 
 

@@ -84,6 +84,7 @@ namespace ProjetoCarrinhoProdutos.Controllers
         }
 
         [HttpPost("{id}/adicionar")]
+        [ProducesResponseType<int>(StatusCodes.Status200OK)]
         public ActionResult AdicionarProduto(string id, [FromBody] Produto produto)
         {
             try
@@ -99,6 +100,7 @@ namespace ProjetoCarrinhoProdutos.Controllers
         }
 
         [HttpPost("{id}/remover/{idProduto}")]
+        [ProducesResponseType<int>(StatusCodes.Status200OK)]
         public ActionResult RemoverProduto(string id, string idProduto)
         {
             try
