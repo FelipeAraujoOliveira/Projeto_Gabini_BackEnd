@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Migrations\\CarrinhoDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\CarrinhoDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|c:\\users\\felipe\\downloads\\vs\\gabinibackend\\seeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|solutionrelative:seeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Controllers\\CarrinhoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\CarrinhoController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Models\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Models\\Produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Models\\Carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|c:\\users\\felipe\\downloads\\vs\\gabinibackend\\migrations\\carrinhodbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|solutionrelative:migrations\\carrinhodbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Controllers\\UsuarioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -52,6 +36,26 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Seeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|c:\\users\\felipe\\downloads\\vs\\gabinibackend\\controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|solutionrelative:controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|c:\\users\\felipe\\downloads\\vs\\gabinibackend\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|c:\\users\\felipe\\downloads\\vs\\gabinibackend\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|solutionrelative:models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|c:\\users\\felipe\\downloads\\vs\\gabinibackend\\models\\carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|solutionrelative:models\\carrinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|c:\\users\\felipe\\downloads\\vs\\gabinibackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{65759862-368D-4D3E-A552-D92AD971607C}|GabiniBackEnd.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,19 +70,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Seeder.cs",
+              "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Seeder.cs",
+              "RelativeDocumentMoniker": "Seeder.cs",
+              "ToolTip": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Seeder.cs",
+              "RelativeToolTip": "Seeder.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAmwCAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T11:08:24.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CarrinhoDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Migrations\\CarrinhoDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\CarrinhoDbContextModelSnapshot.cs",
               "ToolTip": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Migrations\\CarrinhoDbContextModelSnapshot.cs",
               "RelativeToolTip": "Migrations\\CarrinhoDbContextModelSnapshot.cs",
-              "ViewState": "AQIAAJAAAAAAAAAAAAAAAJgAAAAAAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAJgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T10:58:14.645Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "CarrinhoController.cs",
               "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Controllers\\CarrinhoController.cs",
               "RelativeDocumentMoniker": "Controllers\\CarrinhoController.cs",
@@ -86,12 +103,11 @@
               "RelativeToolTip": "Controllers\\CarrinhoController.cs",
               "ViewState": "AQIAAFcAAAAAAAAAAAAAAGYAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T10:56:51.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T10:56:51.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Models\\Usuario.cs",
@@ -99,12 +115,11 @@
               "RelativeToolTip": "Models\\Usuario.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T10:55:58.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T10:55:58.163Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Produto.cs",
               "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Models\\Produto.cs",
               "RelativeDocumentMoniker": "Models\\Produto.cs",
@@ -112,12 +127,11 @@
               "RelativeToolTip": "Models\\Produto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T10:55:30.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T10:55:30.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "Carrinho.cs",
               "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\Models\\Carrinho.cs",
               "RelativeDocumentMoniker": "Models\\Carrinho.cs",
@@ -125,12 +139,11 @@
               "RelativeToolTip": "Models\\Carrinho.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T10:53:54.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T10:53:54.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Felipe\\Downloads\\vs\\GabiniBackEnd\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -138,12 +151,11 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-31T10:31:54.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-31T10:31:54.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Services\\AuthService.cs",
@@ -155,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Controllers\\UsuarioController.cs",
@@ -166,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Services\\UsuarioService.cs",
@@ -178,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Repositories\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Repositories\\UsuarioRepository.cs",
@@ -190,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Models\\Usuario.cs",
@@ -202,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "CarrinhoDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\CarrinhoDbContext.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\CarrinhoDbContext.cs",
@@ -214,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\appsettings.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\appsettings.json",
@@ -226,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Program.cs",
@@ -238,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 10,
               "Title": "Seeder.cs",
               "DocumentMoniker": "C:\\Users\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Seeder.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aula\\Desktop\\Projeto_Gabini_BackEnd-main\\GabiniBackEnd\\Seeder.cs",

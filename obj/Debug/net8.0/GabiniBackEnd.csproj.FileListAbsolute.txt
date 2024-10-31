@@ -440,3 +440,4 @@ C:\Users\Felipe\Downloads\vs\GabiniBackEnd\obj\Debug\net8.0\refint\GabiniBackEnd
 C:\Users\Felipe\Downloads\vs\GabiniBackEnd\obj\Debug\net8.0\GabiniBackEnd.pdb
 C:\Users\Felipe\Downloads\vs\GabiniBackEnd\obj\Debug\net8.0\GabiniBackEnd.genruntimeconfig.cache
 C:\Users\Felipe\Downloads\vs\GabiniBackEnd\obj\Debug\net8.0\ref\GabiniBackEnd.dll
+C:\Users\Felipe\Downloads\vs\GabiniBackEnd\obj\Debug\net8.0\GabiniBackEnd.sourcelink.json

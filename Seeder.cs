@@ -31,6 +31,7 @@ namespace ProjetoCarrinhoProdutos
                         Senha = "senha1",
                         DataNascimento = "1990-01-01",
                         Cpf = "12345678901",
+                        Ativo = true,
                     };
 
                     var usuario2 = new Usuario
