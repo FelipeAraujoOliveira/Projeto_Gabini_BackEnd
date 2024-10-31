@@ -1,11 +1,7 @@
-﻿using ProjetoCarrinhoProdutos.Models;
-using ProjetoCarrinhoProdutos.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using GabiniBackEnd.Models;
+using GabiniBackEnd.Repositories;
 
-namespace ProjetoCarrinhoProdutos.Services
+namespace GabiniBackEnd.Services
 {
     public class CarrinhoService
     {

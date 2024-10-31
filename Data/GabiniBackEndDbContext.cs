@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using GabiniBackEnd.Models;
 using Microsoft.EntityFrameworkCore;
-using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
-using ProjetoCarrinhoProdutos.Models;
 
-namespace ProjetoCarrinhoProdutos;
+namespace GabiniBackEnd;
 
-public partial class CarrinhoDbContext : DbContext
+public partial class GabiniBackEndDbContext : DbContext
 {
 
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<Produto> Produtos { get; set; }
     public DbSet<Carrinho> Carrinhos { get; set; }
 
-    public CarrinhoDbContext()
+    public GabiniBackEndDbContext()
     {
     }
 
-    public CarrinhoDbContext(DbContextOptions<CarrinhoDbContext> options)
+    public GabiniBackEndDbContext(DbContextOptions<GabiniBackEndDbContext> options)
         : base(options)
     {
     }

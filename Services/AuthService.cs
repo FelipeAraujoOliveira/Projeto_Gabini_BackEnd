@@ -1,8 +1,7 @@
-﻿using ProjetoCarrinhoProdutos.Models;
-using ProjetoCarrinhoProdutos.Repositories;
-using System.Threading.Tasks;
+﻿using GabiniBackEnd.Models;
+using GabiniBackEnd.Repositories;
 
-namespace ProjetoCarrinhoProdutos.Services
+namespace GabiniBackEnd.Services
 {
     public class AuthService
     {

@@ -1,7 +1,7 @@
-﻿using ProjetoCarrinhoProdutos.Models;
-using ProjetoCarrinhoProdutos.Repositories;
+﻿using GabiniBackEnd.Models;
+using GabiniBackEnd.Repositories;
 
-namespace ProjetoCarrinhoProdutos.Services
+namespace GabiniBackEnd.Services
 {
     public class ProdutoService
     {

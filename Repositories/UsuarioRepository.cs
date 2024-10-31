@@ -1,15 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProjetoCarrinhoProdutos.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using GabiniBackEnd.Models;
 
-namespace ProjetoCarrinhoProdutos.Repositories
+namespace GabiniBackEnd.Repositories
 {
     public class UsuarioRepository
     {
-        private readonly CarrinhoDbContext _context;
+        private readonly GabiniBackEndDbContext _context;
 
-        public UsuarioRepository(CarrinhoDbContext context)
+        public UsuarioRepository(GabiniBackEndDbContext context)
         {
             _context = context;
         }

@@ -1,13 +1,9 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using ProjetoCarrinhoProdutos.Repositories;
-using ProjetoCarrinhoProdutos.Services;
-using System.Text;
+using GabiniBackEnd.Repositories;
+using GabiniBackEnd.Services;
 using Microsoft.OpenApi.Models;
-using ProjetoCarrinhoProdutos.Controllers;
 
-namespace ProjetoCarrinhoProdutos
+namespace GabiniBackEnd
 {
     public class Program
     {
@@ -23,7 +19,7 @@ namespace ProjetoCarrinhoProdutos
         private static void InjectRepositoryDependency(IHostApplicationBuilder builder)
         {
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-            builder.Services.AddDbContext<CarrinhoDbContext>(options =>
+            builder.Services.AddDbContext<GabiniBackEndDbContext>(options =>
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
             );
         }
@@ -37,9 +33,9 @@ namespace ProjetoCarrinhoProdutos
             // Configurar CORS
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowAll", builder =>
+                options.AddPolicy("AllowAll", corsBuilder =>
                 {
-                    builder.AllowAnyOrigin()
+                    corsBuilder.AllowAnyOrigin()
                            .AllowAnyMethod()
                            .AllowAnyHeader();
                 });
@@ -77,7 +73,7 @@ namespace ProjetoCarrinhoProdutos
                 InitializeSwagger(app);
             }
 
-            // Usar a política de CORS
+
             app.UseCors("AllowAll");
 
             app.UseAuthorization();

@@ -1,4 +1,4 @@
-﻿namespace ProjetoCarrinhoProdutos.Models
+﻿namespace GabiniBackEnd.Models
 {
     public class Produto
     {

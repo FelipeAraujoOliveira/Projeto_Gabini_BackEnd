@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProjetoCarrinhoProdutos.Services;
-using System.Threading.Tasks;
+using GabiniBackEnd.Services;
 
-namespace ProjetoCarrinhoProdutos.Controllers
+namespace GabiniBackEnd.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

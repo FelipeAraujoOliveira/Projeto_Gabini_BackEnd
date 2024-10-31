@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProjetoCarrinhoProdutos.Models
+namespace GabiniBackEnd.Models
 {
     public class Carrinho
     {

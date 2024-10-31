@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+﻿using GabiniBackEnd.Models;
 using Microsoft.EntityFrameworkCore;
-using ProjetoCarrinhoProdutos.Models;
 
-namespace ProjetoCarrinhoProdutos
+namespace GabiniBackEnd
 {
     public static class Seeder
     {
@@ -11,7 +9,7 @@ namespace ProjetoCarrinhoProdutos
         {
             using (var serviceScope = app.ApplicationServices.CreateScope())
             {
-                var context = serviceScope.ServiceProvider.GetRequiredService<CarrinhoDbContext>();
+                var context = serviceScope.ServiceProvider.GetRequiredService<GabiniBackEndDbContext>();
 
                 await context.Database.MigrateAsync();
 
