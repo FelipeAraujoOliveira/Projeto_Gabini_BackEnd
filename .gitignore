@@ -5,6 +5,7 @@
 
 # dotenv files
 .env
+./.vs/
 
 # User-specific files
 *.rsuser
@@ -37,6 +38,7 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
@@ -482,3 +484,12 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+.vs/VSWorkspaceState.json
+.vs/GabiniBackEnd/DesignTimeBuild/.dtbcache.v2
+.vs/GabiniBackEnd/FileContentIndex/845848c9-105a-4603-843b-2299158cf26a.vsidx
+.vs/GabiniBackEnd/v17/.futdcache.v2
+.vs/GabiniBackEnd/v17/.suo
+.vs/GabiniBackEnd/v17/DocumentLayout.json
+.vs/ProjectEvaluation/gabinibackend.metadata.v8.bin
+.vs/ProjectEvaluation/gabinibackend.projects.v8.bin
+.vs/ProjectEvaluation/gabinibackend.strings.v8.bin
