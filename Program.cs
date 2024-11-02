@@ -66,18 +66,30 @@ namespace GabiniBackEnd
             AddControllersAndDependencies(builder);
 
             var app = builder.Build();
-            await Seeder.SeedAsync(app);
+
+            // Aplicar migrações e executar seeding
+            using (var scope = app.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<GabiniBackEndDbContext>();
+                
+                try
+                {
+                    await context.Database.MigrateAsync(); // Aplica todas as migrações pendentes
+                    await Seeder.SeedAsync(app); // Executa o seeding dos dados
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Erro ao aplicar migrações ou executar seeding: {ex.Message}");
+                }
+            }
 
             if (app.Environment.IsDevelopment())
             {
                 InitializeSwagger(app);
             }
 
-
             app.UseCors("AllowAll");
-
             app.UseAuthorization();
-
             app.MapControllers();
 
             await app.RunAsync();

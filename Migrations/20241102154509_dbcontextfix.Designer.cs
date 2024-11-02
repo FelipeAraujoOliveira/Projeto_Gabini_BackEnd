@@ -4,6 +4,7 @@ using GabiniBackEnd;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GabiniBackEnd.Migrations
 {
     [DbContext(typeof(GabiniBackEndDbContext))]
-    partial class GabiniBackEndDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241102154509_dbcontextfix")]
+    partial class dbcontextfix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
