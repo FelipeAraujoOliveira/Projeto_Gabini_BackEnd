@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <Compile Remove="GabiniBackEnd.Tests\**" />
+    <Compile Remove="Migrations\GabiniBackEndDbContextModelSnapshot.cs" />
   </ItemGroup>
 
   <ItemGroup>

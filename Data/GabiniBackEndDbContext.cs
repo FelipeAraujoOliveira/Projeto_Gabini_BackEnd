@@ -5,17 +5,11 @@ namespace GabiniBackEnd;
 
 public partial class GabiniBackEndDbContext : DbContext
 {
-
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<Produto> Produtos { get; set; }
     public DbSet<Carrinho> Carrinhos { get; set; }
 
-    public GabiniBackEndDbContext()
-    {
-    }
-
-    public GabiniBackEndDbContext(DbContextOptions<GabiniBackEndDbContext> options)
-        : base(options)
+    public GabiniBackEndDbContext(DbContextOptions<GabiniBackEndDbContext> options) : base(options)
     {
     }
 
@@ -30,8 +24,6 @@ public partial class GabiniBackEndDbContext : DbContext
         modelBuilder.Entity<Produto>().HasKey(c => c.Id);
         modelBuilder.Entity<Produto>().Property(c => c.Id).ValueGeneratedOnAdd();
 
-        OnModelCreatingPartial(modelBuilder);
+        base.OnModelCreating(modelBuilder);
     }
-
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
