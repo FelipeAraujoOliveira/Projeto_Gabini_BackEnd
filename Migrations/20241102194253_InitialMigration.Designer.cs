@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GabiniBackEnd.Migrations
 {
     [DbContext(typeof(GabiniBackEndDbContext))]
-    [Migration("20241102154920_SecondMigration")]
-    partial class SecondMigration
+    [Migration("20241102194253_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
