@@ -34,4 +34,26 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="GabiniBackEnd.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="GabiniBackEnd.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="GabiniBackEnd.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="GabiniBackEnd.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="GabiniBackEnd.Tests\obj\GabiniBackEnd.Tests.csproj.nuget.dgspec.json" />
+    <_ContentIncludedByDefault Remove="GabiniBackEnd.Tests\obj\project.assets.json" />
+    <_ContentIncludedByDefault Remove="GabiniBackEnd.Tests\obj\project.packagespec.json" />
+  </ItemGroup>
+
 </Project>
