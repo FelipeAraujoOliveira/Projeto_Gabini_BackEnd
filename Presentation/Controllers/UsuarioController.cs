@@ -32,11 +32,13 @@ namespace Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Usuario>> CreateUsuario([FromBody] Usuario usuario)
+        public async Task<ActionResult<Usuario>> CreateUsuario([FromBody] CreateUsuarioRequest request)
         {
-            var createdUsuario = await _usuarioService.CreateUsuario(usuario);
+            var createdUsuario = await _usuarioService.CreateUsuario(request.Usuario, request.Endereco);
             return CreatedAtAction(nameof(GetUsuarioById), new { id = createdUsuario.Id }, createdUsuario);
         }
+
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUsuario(string id, [FromBody] Usuario usuario)

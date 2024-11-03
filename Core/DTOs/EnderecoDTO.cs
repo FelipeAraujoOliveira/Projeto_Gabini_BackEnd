@@ -4,7 +4,6 @@ namespace Core.DTOs
 {
     public class EnderecoDTO
     {
-        public string Id { get; set; }
 
         [Required]
         public string Rua { get; set; }
@@ -17,6 +16,8 @@ namespace Core.DTOs
 
         [Required]
         public string Estado { get; set; }
+        
+        public string Complemento { get; set; }
 
         [Required]
         public string Cep { get; set; }

@@ -26,7 +26,7 @@ namespace Application.Services
 
             return new EnderecoDTO
             {
-                Id = endereco.Id,
+               
                 Rua = endereco.Rua,
                 Numero = endereco.Numero,
                 Cidade = endereco.Cidade,
@@ -41,7 +41,7 @@ namespace Application.Services
             var enderecos = await _enderecoRepository.GetAllEnderecos();
             return enderecos.Select(endereco => new EnderecoDTO
             {
-                Id = endereco.Id,
+               
                 Rua = endereco.Rua,
                 Numero = endereco.Numero,
                 Cidade = endereco.Cidade,

@@ -5,7 +5,7 @@ namespace Core.Models
 {
     public class Usuario
     {
-        public required string Id { get; set; }
+        public required string Id { get; set; } = Guid.NewGuid().ToString();
         public string NomeCompleto { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }

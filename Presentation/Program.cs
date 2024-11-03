@@ -46,6 +46,8 @@ namespace Presentation
             });
         }
 
+
+
         private static void InjectRepositoryDependency(IHostApplicationBuilder builder)
         {
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -73,6 +75,14 @@ namespace Presentation
             builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 
             builder.Services.AddScoped<ICarrinhoService, CarrinhoService>();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder => builder.AllowAnyOrigin()
+                                      .AllowAnyMethod()
+                                      .AllowAnyHeader());
+            });
         }
 
         private static void AuthenticationMiddleware(IHostApplicationBuilder builder)
@@ -118,7 +128,7 @@ namespace Presentation
                 InitializeSwagger(app);
             }
 
-            
+            app.UseCors("AllowAllOrigins");
 
             app.MapControllers();
 

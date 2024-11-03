@@ -9,7 +9,8 @@ namespace Core.Services
     {
         Task<UsuarioDTO> GetUsuarioById(string usuarioId);
         Task<IEnumerable<UsuarioDTO>> GetAllUsuarios();
-        Task<Usuario> CreateUsuario(Usuario usuario);
+        Task<Usuario> CreateUsuario(UsuarioDTO usuarioDTO, EnderecoDTO enderecoDTO);
+
         Task<Usuario> UpdateUsuario(string usuarioId, Usuario usuario);
         Task<bool> DeleteUsuario(string usuarioId);
         Task<Usuario> GetUsuarioOrThrowException(string usuarioId);

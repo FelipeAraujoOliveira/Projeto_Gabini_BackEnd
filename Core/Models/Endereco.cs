@@ -8,7 +8,7 @@ namespace Core.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Rua { get; set; }
         public string Numero { get; set; }
         public string Complemento { get; set; }
