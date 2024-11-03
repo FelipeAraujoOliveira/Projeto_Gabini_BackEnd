@@ -8,7 +8,6 @@
         public string Cpf { get; set; }
         public string Telefone { get; set; }
         public string NomeDeUsuario { get; set; }
-        public EnderecoDTO Endereco { get; set; }
         public string Url_foto_perfil { get; set; }
     }
 }

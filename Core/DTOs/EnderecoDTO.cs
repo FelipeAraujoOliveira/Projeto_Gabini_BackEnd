@@ -22,6 +22,6 @@ namespace Core.DTOs
         [Required]
         public string Cep { get; set; }
 
-        public string UsuarioId { get; set; }
+
     }
 }

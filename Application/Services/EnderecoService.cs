@@ -32,7 +32,6 @@ namespace Application.Services
                 Cidade = endereco.Cidade,
                 Estado = endereco.Estado,
                 Cep = endereco.Cep,
-                UsuarioId = endereco.UsuarioId
             };
         }
 
@@ -47,7 +46,6 @@ namespace Application.Services
                 Cidade = endereco.Cidade,
                 Estado = endereco.Estado,
                 Cep = endereco.Cep,
-                UsuarioId = endereco.UsuarioId
             });
         }
 
