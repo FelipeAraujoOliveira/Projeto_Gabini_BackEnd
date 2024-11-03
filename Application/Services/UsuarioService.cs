@@ -33,15 +33,15 @@ namespace Application.Services
                 Email = usuario.Email,
                 Telefone = usuario.Telefone,
                 NomeDeUsuario = usuario.NomeDeUsuario,
-                Endereco = usuario.Enderecos.Count > 0 ? new EnderecoDTO
-                {
+                //Endereco = usuario.Enderecos.Count > 0 ? new EnderecoDTO
+                //{
                     
-                    Rua = usuario.Enderecos.First().Rua,
-                    Numero = usuario.Enderecos.First().Numero,
-                    Cidade = usuario.Enderecos.First().Cidade,
-                    Estado = usuario.Enderecos.First().Estado,
-                    Cep = usuario.Enderecos.First().Cep
-                } : null,
+                //    Rua = usuario.Enderecos.First().Rua,
+                //    Numero = usuario.Enderecos.First().Numero,
+                //    Cidade = usuario.Enderecos.First().Cidade,
+                //    Estado = usuario.Enderecos.First().Estado,
+                //    Cep = usuario.Enderecos.First().Cep
+                //} : null,
                 Url_foto_perfil = usuario.Url_foto_perfil,
             };
         }
@@ -57,15 +57,15 @@ namespace Application.Services
                 Telefone = usuario.Telefone,
                 NomeDeUsuario = usuario.NomeDeUsuario,
                 Url_foto_perfil = usuario.Url_foto_perfil,
-                Endereco = usuario.Enderecos.Count > 0 ? new EnderecoDTO
-                {
+                //Endereco = usuario.Enderecos.Count > 0 ? new EnderecoDTO
+                //{
                     
-                    Rua = usuario.Enderecos.First().Rua,
-                    Numero = usuario.Enderecos.First().Numero,
-                    Cidade = usuario.Enderecos.First().Cidade,
-                    Estado = usuario.Enderecos.First().Estado,
-                    Cep = usuario.Enderecos.First().Cep
-                } : null,
+                //    Rua = usuario.Enderecos.First().Rua,
+                //    Numero = usuario.Enderecos.First().Numero,
+                //    Cidade = usuario.Enderecos.First().Cidade,
+                //    Estado = usuario.Enderecos.First().Estado,
+                //    Cep = usuario.Enderecos.First().Cep
+                //} : null,
             });
         }
 
