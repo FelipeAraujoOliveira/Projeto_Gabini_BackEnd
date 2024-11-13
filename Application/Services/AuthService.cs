@@ -1,4 +1,4 @@
-﻿using Core.Models;
+using Core.Models;
 using Core.Repositories;
 using Core.Services;
 using System.Security.Claims;
@@ -22,12 +22,12 @@ namespace Application.Services
             return User.FindFirst("id")?.Value;
         }
 
-        public async Task<string> SignIn(string email, string password)
+        public async Task<string> SignIn(string email, string senha)
         {
-            Usuario? usuario = await _authRepository.GetUsuarioByEmailAndPassword(email, password);
+            Usuario? usuario = await _authRepository.GetUsuarioByEmailAndPassword(email, senha);
             if (usuario == null)
             {
-                throw new Exception("Usuário e/ou senha inválidos");
+                throw new UnauthorizedAccessException("Usuário e/ou senha inválidos");
             }
 
             string token = _tokenService.CreateUsuarioToken(usuario);
