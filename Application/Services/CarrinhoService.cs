@@ -60,7 +60,7 @@ namespace Application.Services
             var carrinho = await _carrinhoRepository.GetCarrinhoById(id);
             if (carrinho == null) return null;
 
-            List<Item> updatedItems = carrinhoDto.Produtos
+            List<Item> updatedItems = carrinhoDto.ProdutosDTO
                 .Select(pi => new Item { Produto = carrinho.Produtos.First(p => p.Produto.Id == pi.ProdutoId).Produto, Quantity = pi.Quantity })
                 .ToList();
 

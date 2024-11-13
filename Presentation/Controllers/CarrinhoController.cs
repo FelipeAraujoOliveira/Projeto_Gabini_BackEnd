@@ -23,7 +23,7 @@ namespace Presentation.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateCarrinho([FromBody] CarrinhoCreateDTO carrinhoDto)
         {
-            var carrinho = await _carrinhoService.SaveCarrinho(carrinhoDto.UsuarioId, carrinhoDto.Produtos);
+            var carrinho = await _carrinhoService.SaveCarrinho(carrinhoDto.UsuarioId, carrinhoDto.ProdutosDTO);
 
             if (carrinho == null)
                 return BadRequest("Erro ao criar carrinho.");
