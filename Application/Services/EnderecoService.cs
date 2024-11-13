@@ -1,4 +1,4 @@
-﻿using Core.Models;
+using Core.Models;
 using Core.DTOs;
 using Core.Repositories;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ namespace Application.Services
             var endereco = await _enderecoRepository.GetEndereco(id);
             if (endereco == null)
             {
-                throw new Exception("Endereço não encontrado");
+                throw new NullReferenceException("Endereço não encontrado");
             }
 
             return new EnderecoDTO
