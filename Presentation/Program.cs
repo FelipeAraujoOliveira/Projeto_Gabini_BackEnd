@@ -85,6 +85,10 @@ namespace Presentation
 
         private static void AuthenticationMiddleware(IHostApplicationBuilder builder)
         {
+            // Obtendo chave secreta de variáveis de ambiente
+            var secretKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY") 
+                            ?? throw new InvalidOperationException("JWT_SECRET_KEY não foi configurada.");
+
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -94,7 +98,7 @@ namespace Presentation
                         ValidateAudience = false,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SECRET_KEY"]!))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
                     };
                 });
             builder.Services.AddAuthorization();
