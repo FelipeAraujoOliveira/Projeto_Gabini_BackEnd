@@ -3,7 +3,6 @@ using Core.Repositories;
 using Core.Services;
 using Infrastructure;
 using Infrastructure.Repositories;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -46,8 +45,6 @@ namespace Presentation
             });
         }
 
-
-
         private static void InjectRepositoryDependency(IHostApplicationBuilder builder)
         {
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -76,18 +73,18 @@ namespace Presentation
 
             builder.Services.AddScoped<ICarrinhoService, CarrinhoService>();
 
+            // ConfiguraÃ§Ã£o de CORS
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowAllOrigins",
-                    builder => builder.AllowAnyOrigin()
-                                      .AllowAnyMethod()
-                                      .AllowAnyHeader());
+                options.AddPolicy("LocalhostPolicy", policy =>
+                    policy.WithOrigins("http://localhost:5173")
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
             });
         }
 
         private static void AuthenticationMiddleware(IHostApplicationBuilder builder)
         {
-            // Configuração de autenticação e autorização
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -109,8 +106,6 @@ namespace Presentation
             app.UseSwaggerUI();
         }
 
-      
-
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -124,11 +119,10 @@ namespace Presentation
 
             if (app.Environment.IsDevelopment())
             {
-                // Inicialização do Swagger
+                // InicializaÃ§Ã£o do Swagger
                 InitializeSwagger(app);
             }
-
-            app.UseCors("AllowAllOrigins");
+            app.UseCors("LocalhostPolicy");
 
             app.MapControllers();
 
