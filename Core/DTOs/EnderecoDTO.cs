@@ -6,21 +6,22 @@ namespace Core.DTOs
     {
 
         [Required]
-        public string Rua { get; set; }
+        public required string Rua { get; set; }
 
         [Required]
-        public string Numero { get; set; }
+        public required string Numero { get; set; }
 
         [Required]
-        public string Cidade { get; set; }
+        public required string Cidade { get; set; }
 
         [Required]
-        public string Estado { get; set; }
+        public required string Estado { get; set; }
+        
         
         public string Complemento { get; set; }
 
         [Required]
-        public string Cep { get; set; }
+        public required string Cep { get; set; }
 
 
     }

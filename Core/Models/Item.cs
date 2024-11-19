@@ -2,8 +2,8 @@
 {
     public class Item
     {
-        public string Id { get; set; }
-        public Produto Produto { get; set; }
+        public required string Id { get; set; }
+        public required Produto Produto { get; set; }
         public double Quantity { get; set; }
     }
 }
