@@ -1,5 +1,6 @@
 ﻿using Core.DTOs;
-
+namespace Core.DTOs
+{
 public class CarrinhoCreateDTO
 {
     public string UsuarioId { get; set; }
@@ -9,4 +10,5 @@ public class CarrinhoCreateDTO
 public class CarrinhoUpdateDTO
 {
     public ICollection<ProdutoItemDTO> ProdutosDTO { get; set; }
+}
 }
