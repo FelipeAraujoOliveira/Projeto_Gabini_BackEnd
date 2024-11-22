@@ -3,12 +3,13 @@ using Core.Repositories;
 using Core.Services;
 using Infrastructure;
 using Infrastructure.Repositories;
-using Infrastructure.Services; // Adicione esta linha
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Presentation.Services;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Text;
 
 namespace Presentation
@@ -43,13 +44,14 @@ namespace Presentation
                         Array.Empty<string>()
                     }
                 });
+                //c.OperationFilter<SwaggerFileOperationFilter>(); // Adicione esta linha
             });
         }
 
         private static void InjectRepositoryDependency(IHostApplicationBuilder builder)
         {
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-            builder.Services.AddDbContext<CarrinhosDbContext>(options =>
+            builder.Services.AddDbContext<GabiniDbContext>(options =>
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
             );
         }
@@ -71,12 +73,16 @@ namespace Presentation
             builder.Services.AddScoped<ICarrinhoRepository, CarrinhoRepository>();
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
             builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+            builder.Services.AddScoped<IImageService, ImageService>();
+
+            builder.Logging.ClearProviders();
+            builder.Logging.AddConsole();
 
             builder.Services.AddScoped<ICarrinhoService, CarrinhoService>();
 
             // Adicione a configuração do Cloudinary
             builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
-            builder.Services.AddSingleton<IImageService, CloudinaryService>();
+            //builder.Services.AddSingleton<IImageService, CloudinaryService>();
 
             // Configuração de CORS
             builder.Services.AddCors(options =>
@@ -137,6 +143,26 @@ namespace Presentation
             app.MapControllers();
 
             app.Run();
+        }
+    }
+
+    // Classe para configurar o Swagger para aceitar arquivos de upload
+    public class SwaggerFileOperationFilter : IOperationFilter
+    {
+        public void Apply(OpenApiOperation operation, OperationFilterContext context)
+        {
+            var fileUploadMime = "multipart/form-data";
+
+            if (operation.RequestBody == null || !operation.RequestBody.Content.Any(x => x.Key.Equals(fileUploadMime, StringComparison.InvariantCultureIgnoreCase)))
+            {
+                return;
+            }
+
+            operation.RequestBody.Content[fileUploadMime].Schema.Properties["file"] = new OpenApiSchema
+            {
+                Type = "string",
+                Format = "binary"
+            };
         }
     }
 }

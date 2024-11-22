@@ -7,9 +7,9 @@ namespace Infrastructure.Repositories
     public class AuthRepository : IAuthRepository
     {
 
-        private readonly CarrinhosDbContext _context;
+        private readonly GabiniDbContext _context;
 
-        public AuthRepository(CarrinhosDbContext context)
+        public AuthRepository(GabiniDbContext context)
         {
             _context = context;
         }
