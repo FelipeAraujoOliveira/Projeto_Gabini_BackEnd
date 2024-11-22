@@ -13,5 +13,6 @@ namespace Core.Repositories
         Task<Produto> GetProdutoById(string id);
         Task<List<Produto>> GetAllProdutos();
 
+
     }
 }

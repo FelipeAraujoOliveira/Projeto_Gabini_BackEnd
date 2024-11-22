@@ -10,6 +10,7 @@ namespace Core.Services
         Task Add(Produto produto);
         Task<Produto> GetProdutoById(string id);
         Task<List<Produto>> GetAllProdutos();
+        Task<string> UploadProductImage(string productId, FileData file);
 
     }
 }

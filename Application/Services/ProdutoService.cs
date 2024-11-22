@@ -35,7 +35,7 @@ namespace Application.Services
             return await _produtoRepository.GetProdutoById(id);
         }
 
-        public async Task<string> UploadProdutoImage(string produtoId, FileData file)
+        public async Task<string> UploadProductImage(string produtoId, FileData file)
         {
             
             Produto produto = await GetProdutoById(produtoId);
