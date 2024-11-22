@@ -6,6 +6,7 @@
 # dotenv files
 .env
 
+./Presentation/appsettings.json
 
 # User-specific files
 *.rsuser
