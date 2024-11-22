@@ -1,18 +1,18 @@
 ﻿using Core.Models;
 using Core.Repositories;
 using Core.Services;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Application.Services
 {
     public class ProdutoService : IProdutoService
     {
         private readonly IProdutoRepository _produtoRepository;
+        private readonly IImageService _imageService;
 
-        public ProdutoService(IProdutoRepository produtoRepository)
+        public ProdutoService(IProdutoRepository produtoRepository, IImageService imageService)
         {
             _produtoRepository = produtoRepository;
+            _imageService = imageService;
         }
 
         public async Task<List<Produto>> GetProdutos(List<string> produtosIds)
@@ -34,5 +34,20 @@ namespace Application.Services
         {
             return await _produtoRepository.GetProdutoById(id);
         }
+
+        public async Task<string> UploadProdutoImage(string produtoId, FileData file)
+        {
+            
+            Produto produto = await GetProdutoById(produtoId);
+
+            string uploadedFileUrl = await _imageService.UploadImage(file, "produtos", produtoId);
+
+            produto.Image_url = uploadedFileUrl;
+
+            await _produtoRepository.Update(produto);
+
+            return uploadedFileUrl;
+        }
+
     }
 }

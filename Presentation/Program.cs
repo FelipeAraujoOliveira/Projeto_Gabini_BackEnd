@@ -3,6 +3,7 @@ using Core.Repositories;
 using Core.Services;
 using Infrastructure;
 using Infrastructure.Repositories;
+using Infrastructure.Services; // Adicione esta linha
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -73,6 +74,10 @@ namespace Presentation
 
             builder.Services.AddScoped<ICarrinhoService, CarrinhoService>();
 
+            // Adicione a configuração do Cloudinary
+            builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
+            builder.Services.AddSingleton<IImageService, CloudinaryService>();
+
             // Configuração de CORS
             builder.Services.AddCors(options =>
             {
@@ -86,7 +91,7 @@ namespace Presentation
         private static void AuthenticationMiddleware(IHostApplicationBuilder builder)
         {
             // Obtendo chave secreta de variáveis de ambiente
-            var secretKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY") 
+            var secretKey = builder.Configuration["JwtSettings:SecretKey"]
                             ?? throw new InvalidOperationException("JWT_SECRET_KEY não foi configurada.");
 
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -113,6 +118,7 @@ namespace Presentation
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
             ConfigureSwagger(builder.Services);
             InjectRepositoryDependency(builder);
