@@ -9,9 +9,9 @@ namespace Infrastructure.Repositories
 {
     public class CarrinhoRepository : ICarrinhoRepository
     {
-        private readonly CarrinhosDbContext _context;
+        private readonly GabiniDbContext _context;
 
-        public CarrinhoRepository(CarrinhosDbContext context)
+        public CarrinhoRepository(GabiniDbContext context)
         {
             _context = context;
         }

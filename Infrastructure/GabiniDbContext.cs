@@ -3,14 +3,14 @@ using Core.Models;
 
 namespace Infrastructure;
 
-public partial class CarrinhosDbContext : DbContext
+public partial class GabiniDbContext : DbContext
 {
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<Produto> Produtos { get; set; }
     public DbSet<Carrinho> Carrinhos { get; set; }
     public DbSet<Endereco> Enderecos { get; set; }
 
-    public CarrinhosDbContext(DbContextOptions<CarrinhosDbContext> options)
+    public GabiniDbContext(DbContextOptions<GabiniDbContext> options)
         : base(options)
     {
     }

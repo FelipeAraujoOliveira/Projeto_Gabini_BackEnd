@@ -8,9 +8,9 @@ namespace Infrastructure.Repositories
 {
     public class ProdutoRepository : IProdutoRepository
     {
-        private readonly CarrinhosDbContext _context;
+        private readonly GabiniDbContext _context;
 
-        public ProdutoRepository(CarrinhosDbContext context)
+        public ProdutoRepository(GabiniDbContext context)
         {
             _context = context;
         }
