@@ -41,16 +41,42 @@ namespace YourNamespace.Controllers
             return CreatedAtAction(nameof(GetProdutoById), new { id = produto.Id }, produto);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetProdutoById(string id)
+        [HttpPost("{ProductId}/UploadImage")]
+        public async Task<ActionResult<string>> UploadImage(string ProductId, IFormFile file)
         {
-            var produto = await _produtoService.GetProdutoById(id);
-            if (produto == null)
+            if (file == null || file.Length == 0)
             {
-                return NotFound();
+                return BadRequest("No image found");
             }
 
-            return Ok(produto);
+            using var memoryStream = new MemoryStream();
+            await file.CopyToAsync(memoryStream);
+
+            var fileData = new FileData
+            {
+                FileName = file.FileName,
+                Content = memoryStream.ToArray(),
+                ContentType = file.ContentType,
+                Extension = Path.GetExtension(file.FileName),
+            };
+            string imageUrl = await _produtoService.UploadProductImage(ProductId, fileData);
+
+            return CreatedAtAction(nameof(UploadImage), imageUrl);
         }
+
+            [HttpGet("{id}")]
+            public async Task<IActionResult> GetProdutoById(string id)
+            {
+                var produto = await _produtoService.GetProdutoById(id);
+                if (produto == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(produto);
+            }
+
+            
+        }
+
     }
-}

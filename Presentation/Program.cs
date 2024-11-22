@@ -44,7 +44,6 @@ namespace Presentation
                         Array.Empty<string>()
                     }
                 });
-                //c.OperationFilter<SwaggerFileOperationFilter>(); // Adicione esta linha
             });
         }
 
@@ -74,15 +73,9 @@ namespace Presentation
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
             builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
             builder.Services.AddScoped<IImageService, ImageService>();
-
-            builder.Logging.ClearProviders();
-            builder.Logging.AddConsole();
-
             builder.Services.AddScoped<ICarrinhoService, CarrinhoService>();
 
-            // Adicione a configuração do Cloudinary
-            builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
-            //builder.Services.AddSingleton<IImageService, CloudinaryService>();
+            
 
             // Configuração de CORS
             builder.Services.AddCors(options =>
@@ -96,7 +89,6 @@ namespace Presentation
 
         private static void AuthenticationMiddleware(IHostApplicationBuilder builder)
         {
-            // Obtendo chave secreta de variáveis de ambiente
             var secretKey = builder.Configuration["JwtSettings:SecretKey"]
                             ?? throw new InvalidOperationException("JWT_SECRET_KEY não foi configurada.");
 
@@ -141,7 +133,7 @@ namespace Presentation
             app.UseCors("LocalhostPolicy");
 
             app.MapControllers();
-
+            app.UseStaticFiles();
             app.Run();
         }
     }
