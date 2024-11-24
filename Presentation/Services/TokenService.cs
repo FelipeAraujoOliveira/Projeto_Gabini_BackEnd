@@ -4,19 +4,24 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.Extensions.Configuration;
 
 namespace Presentation.Services
 {
     public class TokenService : ITokenService
     {
+        private readonly string _secretKey;
+
+        public TokenService(IConfiguration configuration)
+        {
+            _secretKey = configuration["JwtSettings:SecretKey"]
+                         ?? throw new InvalidOperationException("JwtSettings:SecretKey não está configurada.");
+        }
 
         public string CreateUsuarioToken(Usuario usuario)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var secretKey = Environment.GetEnvironmentVariable("JWT_SECRET_KEY") 
-                            ?? throw new InvalidOperationException("JWT_SECRET_KEY não está configurada.");
-
-            var key = Encoding.UTF8.GetBytes(secretKey);
+            var key = Encoding.UTF8.GetBytes(_secretKey);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
