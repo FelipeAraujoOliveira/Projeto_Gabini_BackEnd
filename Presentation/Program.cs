@@ -97,7 +97,7 @@ namespace Presentation
                         ValidateAudience = false,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SECRET_KEY"]!))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SECRET_KEY"]!))
                     };
                 });
             builder.Services.AddAuthorization();
@@ -113,11 +113,9 @@ namespace Presentation
 
         public static void Main(string[] args)
         {
-            var root = Directory.GetCurrentDirectory();
+           
             var builder = WebApplication.CreateBuilder(args);
-            var dotenv = Path.Combine(root, ".env");
-            EnvConfig.Load(dotenv);
-
+           
             builder.Configuration["JWT:SECRET_KEY"] = Environment.GetEnvironmentVariable("JWT__SECRET_KEY");
 
             ConfigureSwagger(builder.Services);
