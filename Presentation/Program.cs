@@ -3,12 +3,13 @@ using Core.Repositories;
 using Core.Services;
 using Infrastructure;
 using Infrastructure.Repositories;
-using Microsoft.AspNetCore.Authentication;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Presentation.Services;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Text;
 
 namespace Presentation
@@ -46,12 +47,10 @@ namespace Presentation
             });
         }
 
-
-
         private static void InjectRepositoryDependency(IHostApplicationBuilder builder)
         {
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-            builder.Services.AddDbContext<CarrinhosDbContext>(options =>
+            builder.Services.AddDbContext<GabiniDbContext>(options =>
                 options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
             );
         }
@@ -73,21 +72,26 @@ namespace Presentation
             builder.Services.AddScoped<ICarrinhoRepository, CarrinhoRepository>();
             builder.Services.AddScoped<IAuthRepository, AuthRepository>();
             builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
-
+            builder.Services.AddScoped<IImageService, ImageService>();
             builder.Services.AddScoped<ICarrinhoService, CarrinhoService>();
 
+            
+
+            // ConfiguraÃ§Ã£o de CORS
             builder.Services.AddCors(options =>
             {
-                options.AddPolicy("AllowAllOrigins",
-                    builder => builder.AllowAnyOrigin()
-                                      .AllowAnyMethod()
-                                      .AllowAnyHeader());
+                options.AddPolicy("LocalhostPolicy", policy =>
+                    policy.WithOrigins("http://localhost:5173")
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
             });
         }
 
         private static void AuthenticationMiddleware(IHostApplicationBuilder builder)
         {
-            // Configuração de autenticação e autorização
+            var secretKey = builder.Configuration["JwtSettings:SecretKey"]
+                            ?? throw new InvalidOperationException("JWT_SECRET_KEY nÃ£o foi configurada.");
+
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -97,7 +101,7 @@ namespace Presentation
                         ValidateAudience = false,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SECRET_KEY"]!))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
                     };
                 });
             builder.Services.AddAuthorization();
@@ -109,14 +113,10 @@ namespace Presentation
             app.UseSwaggerUI();
         }
 
-      
-
         public static void Main(string[] args)
         {
-           
             var builder = WebApplication.CreateBuilder(args);
-           
-            builder.Configuration["JWT:SECRET_KEY"] = Environment.GetEnvironmentVariable("JWT__SECRET_KEY");
+            builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
             ConfigureSwagger(builder.Services);
             InjectRepositoryDependency(builder);
@@ -127,15 +127,34 @@ namespace Presentation
 
             if (app.Environment.IsDevelopment())
             {
-                // Inicialização do Swagger
+                // InicializaÃ§Ã£o do Swagger
                 InitializeSwagger(app);
             }
-
-            app.UseCors("AllowAllOrigins");
+            app.UseCors("LocalhostPolicy");
 
             app.MapControllers();
-
+            app.UseStaticFiles();
             app.Run();
+        }
+    }
+
+    // Classe para configurar o Swagger para aceitar arquivos de upload
+    public class SwaggerFileOperationFilter : IOperationFilter
+    {
+        public void Apply(OpenApiOperation operation, OperationFilterContext context)
+        {
+            var fileUploadMime = "multipart/form-data";
+
+            if (operation.RequestBody == null || !operation.RequestBody.Content.Any(x => x.Key.Equals(fileUploadMime, StringComparison.InvariantCultureIgnoreCase)))
+            {
+                return;
+            }
+
+            operation.RequestBody.Content[fileUploadMime].Schema.Properties["file"] = new OpenApiSchema
+            {
+                Type = "string",
+                Format = "binary"
+            };
         }
     }
 }

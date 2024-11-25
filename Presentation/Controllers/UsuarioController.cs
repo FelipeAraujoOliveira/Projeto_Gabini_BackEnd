@@ -55,5 +55,28 @@ namespace Presentation.Controllers
             if (!deleted) return NotFound();
             return NoContent();
         }
+
+        [HttpGet("me")]
+        public async Task<ActionResult<UsuarioDTO>> GetCurrentUser()
+        {
+            var userId = User.FindFirst("id")?.Value;
+
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("Usuário não autenticado.");
+            }
+
+            try
+            {
+                var usuarioDTO = await _usuarioService.GetUsuarioById(userId);
+                return Ok(usuarioDTO);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+
     }
 }

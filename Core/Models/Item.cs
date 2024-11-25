@@ -5,5 +5,11 @@
         public string Id { get; set; }
         public Produto Produto { get; set; }
         public double Quantity { get; set; }
+
+
+        public Item() { }
     }
+
+    
+
 }

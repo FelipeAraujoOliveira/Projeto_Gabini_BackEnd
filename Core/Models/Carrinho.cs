@@ -6,10 +6,13 @@
         public Usuario Usuario { get; set; }
         public DateTime CarrinhoDate { get; set; }
         public List<Item> Produtos { get; set; } = new List<Item>();
-        public double TotalAmount { get
+
+        public double TotalAmount
+        {
+            get
             {
-                return Produtos.Sum((produto) => produto.Quantity * produto.Produto.Price);
-            } private set {}
+                return Produtos.Sum(produto => produto.Quantity * produto.Produto.Price);
+            }
         }
 
         private Carrinho() { }

@@ -4,22 +4,25 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.Extensions.Configuration;
 
 namespace Presentation.Services
 {
     public class TokenService : ITokenService
     {
-        private readonly IConfiguration _configuration;
+        private readonly string _secretKey;
 
         public TokenService(IConfiguration configuration)
         {
-            _configuration = configuration;
+            _secretKey = configuration["JwtSettings:SecretKey"]
+                         ?? throw new InvalidOperationException("JwtSettings:SecretKey não está configurada.");
         }
 
         public string CreateUsuarioToken(Usuario usuario)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.UTF8.GetBytes(_configuration["Jwt:SECRET_KEY"]);
+            var key = Encoding.UTF8.GetBytes(_secretKey);
+
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
@@ -27,15 +30,13 @@ namespace Presentation.Services
                     new Claim(ClaimTypes.Name, usuario.NomeCompleto),
                     new Claim(ClaimTypes.Email, usuario.Email),
                     new Claim("id", usuario.Id.ToString()),
-                    // new Claim(ClaimTypes.Role, usuario.Perfil.ToString()),
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
 
-            return tokenString;
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
     }
 }

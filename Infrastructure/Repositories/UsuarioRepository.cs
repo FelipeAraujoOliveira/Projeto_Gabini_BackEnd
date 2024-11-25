@@ -8,9 +8,9 @@ namespace Infrastructure.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        private readonly CarrinhosDbContext _context;
+        private readonly GabiniDbContext _context;
 
-        public UsuarioRepository(CarrinhosDbContext context)
+        public UsuarioRepository(GabiniDbContext context)
         {
             _context = context;
         }

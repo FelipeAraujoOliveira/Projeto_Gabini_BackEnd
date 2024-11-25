@@ -8,9 +8,9 @@ namespace Infrastructure.Repositories
 {
     public class EnderecoRepository : IEnderecoRepository
     {
-        private readonly CarrinhosDbContext _context;
+        private readonly GabiniDbContext _context;
 
-        public EnderecoRepository(CarrinhosDbContext context)
+        public EnderecoRepository(GabiniDbContext context)
         {
             _context = context;
         }
