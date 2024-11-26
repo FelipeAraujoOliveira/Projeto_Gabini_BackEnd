@@ -2,10 +2,12 @@
 using Core.Models;
 using Application.Services;
 using Core.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace YourNamespace.Controllers
 {
     [ApiController]
+    //[Authorize]
     [Route("api/[controller]")]
     public class ProdutoController : ControllerBase
     {

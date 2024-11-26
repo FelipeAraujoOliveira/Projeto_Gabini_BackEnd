@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Models;
 using Core.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentation.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class EnderecoController : ControllerBase
     {
