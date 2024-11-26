@@ -18,9 +18,19 @@ namespace Presentation.Controllers
         [HttpPost("signIn")]
         public async Task<ActionResult<string>> SignIn(SignInDTO signInDTO)
         {
-            string token = await _authService.SignIn(signInDTO.Email, signInDTO.Password);
-
-            return CreatedAtAction(nameof(SignIn), token);
+            try
+            {
+                string token = await _authService.SignIn(signInDTO.Email, signInDTO.Password);
+                return Ok(new { token });
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                // Retorna 401
+                return Unauthorized(new
+                {
+                    message = ex.Message
+                });
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Core.DTOs;
 using Core.Models;
 using Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers
@@ -10,6 +11,7 @@ namespace Presentation.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioService _usuarioService;
+
 
         public UsuarioController(IUsuarioService usuarioService)
         {
@@ -39,7 +41,6 @@ namespace Presentation.Controllers
         }
 
 
-
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUsuario(string id, [FromBody] Usuario usuario)
         {
@@ -48,6 +49,7 @@ namespace Presentation.Controllers
             return Ok(updatedUsuario);
         }
 
+     
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUsuario(string id)
         {

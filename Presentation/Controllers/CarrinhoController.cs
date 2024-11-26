@@ -2,6 +2,7 @@
 using Core.DTOs;
 using Core.Models;
 using Core.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 namespace Presentation.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/[controller]")]
     public class CarrinhoController : ControllerBase
     {
